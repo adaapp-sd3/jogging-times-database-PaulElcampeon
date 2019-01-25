@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Followers</title>
+    <!-- Tailwind.css is a CSS library. Read the docs here: -->
+    <!-- https://tailwindcss.com/docs/what-is-tailwind -->
+    <link rel="stylesheet" href="css/tailwind.css"/>
+</head>
+<body class="bg-grey-lightest">
+<header class="fixed pin-x pin-t bg-purple shadow text-white">
+    <div class="mx-auto h-16 p-4 flex items-center justify-between" style="width: 800px">
+        <h2>Jog Times</h2>
+        <div id="introDiv"></div>
+        <a href="http://localhost:8080/profile"
+           class="text-white border border-white rounded p-2 no-underline hover:bg-purple-light ml-4">
+            Home
+        </a>
+        <a href="http://localhost:8080/followers"
+           class="text-white border border-white rounded p-2 no-underline hover:bg-purple-light ml-4">
+            Followers
+        </a>
+        <button id="deleteAccountBtn"
+                class="text-white border border-white rounded p-2 no-underline hover:bg-purple-light ml-4">
+            Delete Account
+        </button>
+        <a href="http://localhost:8080/sign-out"
+           class="text-white border border-white rounded p-2 no-underline hover:bg-purple-light ml-4">
+            Sign Out
+        </a>
+    </div>
+</header>
+
+<div class="flex flex-wrap flex-row border border-grey-light border-l-0 border-r-0 border-b-0 m-10 p-10 justify-center">
+    <div class="flex-1 text-center shadow-inner m-5 p-5">
+        <h1>Not Following</h1>
+        <br>
+        <div id="usersImNotFollowingDiv" class="flex flex-col"></div>
+    </div>
+    <div class="flex-1 text-center shadow-inner m-5 p-5">
+        <h1>Following</h1>
+        <br>
+        <div id="imFollowing" class="flex flex-col"></div>
+    </div>
+    <div class="flex-1 text-center shadow-inner m-5 p-5">
+        <h1>Followed</h1>
+        <br>
+        <div id="followingMe" class="flex flex-col"></div>
+    </div>
+</div>
+
+<script src="js/followers.js"></script>
+</body>
+</html>
